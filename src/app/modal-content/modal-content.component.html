@@ -1,0 +1,30 @@
+
+
+<form action="http://localhost:8080/put" method="POST">
+
+    <div class="container">
+
+        <label>Full name:</label>
+        <input type="email" class="form-control" placeholder="Enter your name" [(ngModel)]="customerName" name="customerName">
+        <hr>
+    
+            <h5>Availability:</h5>
+        <hr>
+    
+        <dl-date-time-picker
+            startView="day"
+            maxView="year"
+            minView="hour"
+            minuteStep="1"
+            [(ngModel)]="selectedDate" name="selectedDate">
+        </dl-date-time-picker>
+        <hr>
+        <pre>{{displayDate}}</pre>
+
+        <button type="submit" class="btn btn-block btn-success" (click)="addBooking()">Book</button>
+        <button (click)="checkIfAvailable()">Test</button>
+    </div>
+    
+</form>
+
+

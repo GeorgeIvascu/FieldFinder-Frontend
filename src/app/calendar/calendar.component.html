@@ -1,0 +1,29 @@
+<section class="tot">
+
+  <div class="container py-5">
+
+
+    <!-- Calendar -->
+    <div class="calendar shadow bg-white p-5">
+      <div class="d-flex align-items-center"><i class="fa fa-calendar fa-3x mr-3"></i>
+        <h2 class="month font-weight-bold mb-0 text-uppercase">{{months[presentMonth]}} {{presentYear}}</h2>
+      </div>
+      <p class="font-italic text-muted mb-5">No events for this day.</p>
+      <ol class="day-names list-unstyled">
+        <li class="font-weight-bold text-uppercase" *ngFor="let w of week">{{w}}</li>
+      </ol>
+  
+      <ol class="days list-unstyled">
+        <li *ngFor="let d of daysArray">
+          <div class="date"><a href="">{{d}}</a></div>
+        </li>
+      </ol>
+
+      <button class="btn btn-success btn-block" (click)="openModal()">Book a date</button>
+    </div>
+  </div>
+
+</section>
+
+
+

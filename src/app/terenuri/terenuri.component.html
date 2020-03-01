@@ -1,0 +1,18 @@
+
+<h2>Rezultate pentru {{sportAles}} in Sectorul {{sectorAles}}</h2>
+
+
+<div class="card" style="width: 18rem;" *ngFor="let rez of rezultate">
+  <img class="card-img-top" src="favicon.ico" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{rez.name}}</h5>
+    <p class="card-text">{{rez.description}}</p>
+    <p>{{rez.adress}}</p>
+    <button class="btn btn-primary">Sector {{rez.sector}}</button>
+    <button class="btn btn-success" (click)="showMap(rez.id)">Map</button>
+
+        <a href="teren/{{rez.name}}/{{rez.id}}"></a>
+
+  </div>
+</div>
+

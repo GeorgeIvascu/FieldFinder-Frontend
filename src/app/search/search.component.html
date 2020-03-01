@@ -1,0 +1,22 @@
+
+<div class="container">
+
+    <div class="sector col-auto">
+        <h4>Alegeti Sectorul dorit</h4>
+        <select class="form-control" [(ngModel)]="selectedSector">
+          <option *ngFor="let s of sectoare">Sector{{s}}</option>
+        </select>
+      </div>
+    
+      
+    <div class="sport col-auto">
+        <h4>Alegeti Sportul dorit</h4>
+        <select class="form-control" [(ngModel)]="selectedSport">
+          <option *ngFor="let s of sporturi">{{s}}</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn btn-success col-auto" (click)="cauta()">Cauta</button>
+
+
+</div>
